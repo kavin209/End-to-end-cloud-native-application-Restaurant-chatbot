@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - Restobot</title>
+    <style>
+        body {
+            background-image: url('https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2021/09/11/F6oaFndO-JA-Palm-Tree-Court-1.jpg');
+            background-size: cover;
+        }
+        
+        .container {
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 20px;
+        }
+        
+        .form-group input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        
+        .form-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Signup for Le Meridian</h1>
+        <form action="/register" method="POST" class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restobot</title>
+    <style>
+        body {
+            background-image: url('https://assets.architecturaldigest.in/photos/63733ec2a2dd6ea6560eb6da/16:9/pass/Ditas%20Interior%20Image%20-%201%20(8).png');
+            background-size: cover;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    <center>
+        <h1 style="color:white">Welcome To Le Meridian</h1>
+        <br>
+    </center>
+
+    <right> <img class="chatbot-image" src="https://d4t7t8y8xqo0t.cloudfront.net/resized/1080X/restaurant%2F673363%2Fmenu%2Fmenu01620205997854.jpg"width="350" height="500" alt="Chatbot Image">
+    </right>
+    <script>
+        // Function to perform logout
+        function logout() {
+            // Redirect the user to the logout page or clear the session
+            window.location.href = "/logout"; // Redirect to the logout page
+
+            // Alternatively, you can clear the session and redirect to the homepage
+            // sessionStorage.clear();
+            // window.location.href = "/";
+        }
+            window.watsonAssistantChatOptions = {
+              integrationID: "ce8f2e31-8cbe-41d3-aff1-3ff39f37f3f8", // The ID of this integration.
+              region: "us-south", // The region your integration is hosted in.
+              serviceInstanceID: "98b7f195-4042-4f51-b00d-b82d132d8c69", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+</div>
+</body>
+</html>
